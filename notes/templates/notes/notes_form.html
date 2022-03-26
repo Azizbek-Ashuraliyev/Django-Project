@@ -12,6 +12,6 @@
             {{form.errors.title.as_text}}
         </div>
     {% endif %}
-    <a href='{% url 'notes.list' %}' class='btn btn-secondary'>Cancel</a>
+    <a href="{% url 'notes.list' %}" class='btn btn-secondary'>Cancel</a>
 
 {% endblock content %}

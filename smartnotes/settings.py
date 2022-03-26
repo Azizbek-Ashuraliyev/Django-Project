@@ -31,6 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    
+    #apps
+    'home',
+    'notes',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,9 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     
-    #apps
-    'home',
-    'notes',
+
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+LOGIN_REDIRECT_URL='/smart/notes'
