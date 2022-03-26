@@ -15,7 +15,10 @@ class NotesCreateView(CreateView):
     success_url = '/smart/notes'
     form_class = NotesForm  
     
-
+class NotesUpdateView(UpdateView):
+    model = Notes
+    success_url = '/smart/notes'
+    form_class = NotesForm 
 
 class NotesListView(ListView):
     template_name = 'notes/notes_list.html'
