@@ -13,9 +13,9 @@ from django.shortcuts import redirect
 class SignupView(CreateView):
     form_class = UserCreationForm
     template_name = 'home/register.html'
-    success_url = 'notes.list'
+    success_url = '/smart/notes'
 
-    def get(self, request, *args,  **kwargs):
+    def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
             return redirect('notes.list')
         return super().get(request, *args, **kwargs)
